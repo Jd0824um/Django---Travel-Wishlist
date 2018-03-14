@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+##Used to route requests for your site
 urlpatterns = [
     path('admin/', admin.site.urls),
     path(r'', include('travel_wishlist.urls'))

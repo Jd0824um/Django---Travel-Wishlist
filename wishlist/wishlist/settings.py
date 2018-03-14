@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'travel_wishlist'
+    'travel_wishlist' ##Adds the app wishlist
 ]
 
 MIDDLEWARE = [

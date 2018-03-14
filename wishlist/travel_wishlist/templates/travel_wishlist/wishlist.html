@@ -9,11 +9,12 @@
     <button id="add-new-place" type="submit">Add</button>
 </form>
 
-{% for place in places %}
+{% for place in places %} #Loops through the places you have fisited
 
 <div class="wishlist-place">
     <span id="place-name-{{ place.pk }}" class="visited-text">{{ place.name }}</span>
 
+    #Looks up the URL with the name place_is_visited from the urls.py
     <form method="POST" action="{% url 'place_is_visited' %}">
         {% csrf_token %}
         <input type="hidden" name="pk" value="{{ place.pk }}">
@@ -23,7 +24,7 @@
 
 {% empty %}
 
-<p>You have no places in your wishlist</p>
+<p>You have no places in your wishlist</p> #Default statement if theres no places in the wishlist
 
 {% endfor %}
 
